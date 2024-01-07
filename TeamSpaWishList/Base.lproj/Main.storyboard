@@ -23,51 +23,91 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSi-ww-EB3">
-                                <rect key="frame" x="25" y="398" width="343" height="26"/>
+                                <rect key="frame" x="15" y="399" width="363" height="25.333333333333314"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibW-k3-aHB">
-                                <rect key="frame" x="25" y="434" width="343" height="20.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설명" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibW-k3-aHB">
+                                <rect key="frame" x="15" y="434.33333333333331" width="363" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dm-NO-DL0">
-                                <rect key="frame" x="25" y="464.33333333333331" width="343" height="18"/>
+                                <rect key="frame" x="15" y="464.66666666666669" width="363" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="OgH-sJ-1wF">
+                                <rect key="frame" x="15" y="713.66666666666663" width="363" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaH-Gd-Bfs">
+                                        <rect key="frame" x="0.0" y="0.0" width="174" height="35"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="위시 리스트 담기">
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRl-El-Y9U">
+                                        <rect key="frame" x="189" y="0.0" width="174" height="35"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="다른 상품 보기">
+                                            <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="sdH-f1-SUJ"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82v-4J-UeB">
+                                <rect key="frame" x="15" y="763.66666666666663" width="363" height="34.333333333333371"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="위시 리스트 보기">
+                                    <backgroundConfiguration key="background" cornerRadius="8"/>
+                                    <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aKd-W4-KQL" secondAttribute="trailing" id="0bV-f6-GhI"/>
+                            <constraint firstItem="ibW-k3-aHB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Z6-I8-wbd"/>
+                            <constraint firstItem="82v-4J-UeB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="5Dx-NG-XA1"/>
+                            <constraint firstItem="OgH-sJ-1wF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="5GD-Wu-g7Q"/>
                             <constraint firstItem="aKd-W4-KQL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="5Tr-zO-ESN"/>
-                            <constraint firstItem="7dm-NO-DL0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fqd-im-Jva"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="82v-4J-UeB" secondAttribute="bottom" constant="20" id="AWQ-QP-lVG"/>
+                            <constraint firstItem="ibW-k3-aHB" firstAttribute="top" secondItem="iSi-ww-EB3" secondAttribute="bottom" constant="10" id="HC1-JC-5zd"/>
+                            <constraint firstItem="82v-4J-UeB" firstAttribute="top" secondItem="OgH-sJ-1wF" secondAttribute="bottom" constant="15" id="HDG-9g-MZs"/>
+                            <constraint firstItem="ibW-k3-aHB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="TRz-sZ-Qqs"/>
+                            <constraint firstItem="7dm-NO-DL0" firstAttribute="top" secondItem="ibW-k3-aHB" secondAttribute="bottom" constant="10" id="TUD-gr-LUz"/>
+                            <constraint firstItem="iSi-ww-EB3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="XeM-z7-b8o"/>
                             <constraint firstItem="aKd-W4-KQL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ywh-da-KCr"/>
-                            <constraint firstItem="ibW-k3-aHB" firstAttribute="top" secondItem="iSi-ww-EB3" secondAttribute="bottom" constant="10" id="dGi-2W-Wd1"/>
-                            <constraint firstItem="7dm-NO-DL0" firstAttribute="top" secondItem="ibW-k3-aHB" secondAttribute="bottom" constant="10" id="e5A-Fl-2Ou"/>
-                            <constraint firstItem="iSi-ww-EB3" firstAttribute="top" secondItem="aKd-W4-KQL" secondAttribute="bottom" constant="19" id="g8a-VK-RY8"/>
-                            <constraint firstItem="iSi-ww-EB3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h2w-Hz-nub"/>
-                            <constraint firstItem="iSi-ww-EB3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="l6G-jK-NxR"/>
-                            <constraint firstItem="ibW-k3-aHB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q6k-Ea-bPb"/>
-                            <constraint firstItem="ibW-k3-aHB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="sR1-7q-UPQ"/>
-                            <constraint firstItem="7dm-NO-DL0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="tOV-30-n1N"/>
+                            <constraint firstItem="7dm-NO-DL0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eKN-IB-al3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OgH-sJ-1wF" secondAttribute="trailing" constant="15" id="iab-KG-scY"/>
+                            <constraint firstItem="iSi-ww-EB3" firstAttribute="top" secondItem="aKd-W4-KQL" secondAttribute="bottom" constant="20" id="p5v-wD-BvV"/>
+                            <constraint firstItem="iSi-ww-EB3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qpC-KS-cvF"/>
+                            <constraint firstItem="7dm-NO-DL0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="t9D-pA-FpE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="82v-4J-UeB" secondAttribute="trailing" constant="15" id="xS1-TX-UKO"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="productDescriptionLbl" destination="ibW-k3-aHB" id="mgR-Bh-lLF"/>
-                        <outlet property="productImgView" destination="aKd-W4-KQL" id="Dwc-3f-GIO"/>
-                        <outlet property="productNameLbl" destination="iSi-ww-EB3" id="bWe-yu-0xl"/>
-                        <outlet property="productPriceLbl" destination="7dm-NO-DL0" id="PXa-e5-V6O"/>
+                        <outlet property="descriptionLabel" destination="ibW-k3-aHB" id="HzC-dZ-wiW"/>
+                        <outlet property="imageView" destination="aKd-W4-KQL" id="daF-fB-8bq"/>
+                        <outlet property="priceLabel" destination="7dm-NO-DL0" id="8YV-eK-aOo"/>
+                        <outlet property="titleLabel" destination="iSi-ww-EB3" id="Eih-D3-NTd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7" y="-67"/>
+            <point key="canvasLocation" x="98" y="-68"/>
         </scene>
         <!--Wish List View Controller-->
         <scene sceneID="mzF-Fd-kcR">
@@ -95,12 +135,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OgU-8p-dIg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039" y="-27"/>
+            <point key="canvasLocation" x="990" y="-67"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
