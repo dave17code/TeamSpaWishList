@@ -10,11 +10,6 @@ import CoreData
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    
     var persistentContainer: NSPersistentContainer? {
         (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
     }
@@ -40,9 +35,15 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fetchRemoteProduct()
     }
     
     // URLSession을 통해 RemoteProduct를 가져와 currentProduct 변수에 저장
@@ -59,19 +60,46 @@ class ViewController: UIViewController {
                     do {
                         // product를 디코드하여, currentProduct 변수에 담음
                         let product = try JSONDecoder().decode(RemoteProduct.self, from: data)
-                        //
+                        self.currentProduct = product
                     } catch {
                         print("Decode Error: \(error)")
                     }
                 }
             }
+            
+            // 네트워크 요청 시작
+            task.resume()
         }
     }
     
+    private func saveWishProduct() {
+        guard let context = self.persistentContainer?.viewContext else { return }
+        
+        guard let currentProduct = self.currentProduct else { return }
+        
+        let wishProduct = Product(context: context)
+        
+        wishProduct.id = Int64(currentProduct.id)
+        wishProduct.title = currentProduct.title
+        wishProduct.price = currentProduct.price
+        
+        try? context.save()
+    }
     
+    @IBAction func tappedSaveProductButton(_ sender: Any) {
+        saveWishProduct() // Core Data에 상품을 저장하는 함수 호출
+    }
     
+    @IBAction func tappedSkipButton(_ sender: Any) {
+        fetchRemoteProduct() // 새로운 상품을 불러오는 함수 호출
+    }
     
-    
-    
+    @IBAction func tappedPresentWishList(_ sender: Any) {
+        // WishListViewController를 가져옵니다.
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "WishListViewController") as? WishListViewController else { return }
+        
+        // WishListViewController를 present 합니다.
+        present(nextVC, animated: true)
+    }
     
 }

@@ -50,6 +50,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="위시 리스트 담기">
                                             <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tappedSaveProductButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YBh-r5-vhB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRl-El-Y9U">
                                         <rect key="frame" x="189" y="0.0" width="174" height="35"/>
@@ -58,6 +61,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="다른 상품 보기">
                                             <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tappedSkipButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ja-bY-CbI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -73,6 +79,9 @@
                                     <backgroundConfiguration key="background" cornerRadius="8"/>
                                     <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="tappedPresentWishList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tKg-wi-SZR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -107,18 +116,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="98" y="-68"/>
+            <point key="canvasLocation" x="173" y="6"/>
         </scene>
         <!--Wish List View Controller-->
         <scene sceneID="mzF-Fd-kcR">
             <objects>
-                <tableViewController id="UDe-Dw-FeS" customClass="WishListViewController" customModule="TeamSpaWishList" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="WishListViewController" id="UDe-Dw-FeS" customClass="WishListViewController" customModule="TeamSpaWishList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="2Cd-j8-7bC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="NXr-eC-NSv">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="NXr-eC-NSv">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NXr-eC-NSv" id="mP7-ZA-Rqb">
@@ -135,7 +144,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OgU-8p-dIg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="-67"/>
+            <point key="canvasLocation" x="1037" y="7"/>
         </scene>
     </scenes>
     <resources>
