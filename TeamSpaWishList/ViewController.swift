@@ -66,7 +66,7 @@ class ViewController: UIViewController {
                     }
                 }
             }
-            
+
             // 네트워크 요청 시작
             task.resume()
         }
@@ -101,5 +101,4 @@ class ViewController: UIViewController {
         // WishListViewController를 present 합니다.
         present(nextVC, animated: true)
     }
-    
 }
